@@ -1,0 +1,171 @@
+{
+  "direct_dep_identities": [
+    "swift-composable-architecture"
+  ],
+  "modules": [
+    {
+      "name": "CombineSchedulers",
+      "c99name": "CombineSchedulers",
+      "src_type": "swift",
+      "label": "@swiftpkg_combine_schedulers//:CombineSchedulers.rspm",
+      "modulemap_label": "@swiftpkg_combine_schedulers//:CombineSchedulers.rspm_modulemap",
+      "package_identity": "combine-schedulers",
+      "product_memberships": [
+        "CombineSchedulers"
+      ]
+    },
+    {
+      "name": "CasePaths",
+      "c99name": "CasePaths",
+      "src_type": "swift",
+      "label": "@swiftpkg_swift_case_paths//:CasePaths.rspm",
+      "package_identity": "swift-case-paths",
+      "product_memberships": [
+        "CasePaths"
+      ]
+    },
+    {
+      "name": "ComposableArchitecture",
+      "c99name": "ComposableArchitecture",
+      "src_type": "swift",
+      "label": "@swiftpkg_swift_composable_architecture//:ComposableArchitecture.rspm",
+      "package_identity": "swift-composable-architecture",
+      "product_memberships": [
+        "ComposableArchitecture",
+        "ComposableCoreLocation",
+        "ComposableCoreMotion"
+      ]
+    },
+    {
+      "name": "ComposableCoreLocation",
+      "c99name": "ComposableCoreLocation",
+      "src_type": "swift",
+      "label": "@swiftpkg_swift_composable_architecture//:ComposableCoreLocation.rspm",
+      "package_identity": "swift-composable-architecture",
+      "product_memberships": [
+        "ComposableCoreLocation"
+      ]
+    },
+    {
+      "name": "ComposableCoreMotion",
+      "c99name": "ComposableCoreMotion",
+      "src_type": "swift",
+      "label": "@swiftpkg_swift_composable_architecture//:ComposableCoreMotion.rspm",
+      "package_identity": "swift-composable-architecture",
+      "product_memberships": [
+        "ComposableCoreMotion"
+      ]
+    },
+    {
+      "name": "ConcurrencyExtras",
+      "c99name": "ConcurrencyExtras",
+      "src_type": "swift",
+      "label": "@swiftpkg_swift_concurrency_extras//:ConcurrencyExtras.rspm",
+      "package_identity": "swift-concurrency-extras",
+      "product_memberships": [
+        "ConcurrencyExtras"
+      ]
+    },
+    {
+      "name": "XCTestDynamicOverlay",
+      "c99name": "XCTestDynamicOverlay",
+      "src_type": "swift",
+      "label": "@swiftpkg_xctest_dynamic_overlay//:XCTestDynamicOverlay.rspm",
+      "package_identity": "xctest-dynamic-overlay",
+      "product_memberships": [
+        "XCTestDynamicOverlay"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "identity": "combine-schedulers",
+      "name": "CombineSchedulers",
+      "type": "library",
+      "label": "@swiftpkg_combine_schedulers//:CombineSchedulers"
+    },
+    {
+      "identity": "swift-case-paths",
+      "name": "CasePaths",
+      "type": "library",
+      "label": "@swiftpkg_swift_case_paths//:CasePaths"
+    },
+    {
+      "identity": "swift-composable-architecture",
+      "name": "ComposableArchitecture",
+      "type": "library",
+      "label": "@swiftpkg_swift_composable_architecture//:ComposableArchitecture"
+    },
+    {
+      "identity": "swift-composable-architecture",
+      "name": "ComposableCoreLocation",
+      "type": "library",
+      "label": "@swiftpkg_swift_composable_architecture//:ComposableCoreLocation"
+    },
+    {
+      "identity": "swift-composable-architecture",
+      "name": "ComposableCoreMotion",
+      "type": "library",
+      "label": "@swiftpkg_swift_composable_architecture//:ComposableCoreMotion"
+    },
+    {
+      "identity": "swift-concurrency-extras",
+      "name": "ConcurrencyExtras",
+      "type": "library",
+      "label": "@swiftpkg_swift_concurrency_extras//:ConcurrencyExtras"
+    },
+    {
+      "identity": "xctest-dynamic-overlay",
+      "name": "XCTestDynamicOverlay",
+      "type": "library",
+      "label": "@swiftpkg_xctest_dynamic_overlay//:XCTestDynamicOverlay"
+    }
+  ],
+  "packages": [
+    {
+      "name": "swiftpkg_combine_schedulers",
+      "identity": "combine-schedulers",
+      "remote": {
+        "commit": "ec62f32d21584214a4b27c8cee2b2ad70ab2c38a",
+        "remote": "https://github.com/pointfreeco/combine-schedulers",
+        "version": "0.11.0"
+      }
+    },
+    {
+      "name": "swiftpkg_swift_case_paths",
+      "identity": "swift-case-paths",
+      "remote": {
+        "commit": "fc45e7b2cfece9dd80b5a45e6469ffe67fe67984",
+        "remote": "https://github.com/pointfreeco/swift-case-paths",
+        "version": "0.14.1"
+      }
+    },
+    {
+      "name": "swiftpkg_swift_composable_architecture",
+      "identity": "swift-composable-architecture",
+      "remote": {
+        "commit": "c9c1a9a50040408c436e496bac35007add327186",
+        "remote": "https://github.com/pointfreeco/swift-composable-architecture.git",
+        "branch": "master"
+      }
+    },
+    {
+      "name": "swiftpkg_swift_concurrency_extras",
+      "identity": "swift-concurrency-extras",
+      "remote": {
+        "commit": "479750bd98fac2e813fffcf2af0728b5b0085795",
+        "remote": "https://github.com/pointfreeco/swift-concurrency-extras",
+        "version": "0.1.1"
+      }
+    },
+    {
+      "name": "swiftpkg_xctest_dynamic_overlay",
+      "identity": "xctest-dynamic-overlay",
+      "remote": {
+        "commit": "50843cbb8551db836adec2290bb4bc6bac5c1865",
+        "remote": "https://github.com/pointfreeco/xctest-dynamic-overlay",
+        "version": "0.9.0"
+      }
+    }
+  ]
+}
