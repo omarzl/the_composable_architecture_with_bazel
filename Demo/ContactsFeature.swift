@@ -7,11 +7,8 @@
 
 import Foundation
 import ComposableArchitecture
-
-struct Contact: Equatable, Identifiable {
-  let id: UUID
-  var name: String
-}
+import ContactFoundation
+import ContactDetailFeature
 
 @Reducer
 struct ContactsFeature {

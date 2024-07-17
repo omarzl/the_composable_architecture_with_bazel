@@ -42,6 +42,22 @@ swift_library(
     module_name = "Demo",
     srcs = glob(["Demo/*.swift"]),
     deps = [
+        ":ContactDetailFeature"
+    ],
+)
+
+swift_library(
+    name = "ContactDetailFeature",
+    srcs = glob(["ContactDetailFeature/*.swift"]),
+    deps = [
+        ":ContactFoundation",
+    ],
+)
+
+swift_library(
+    name = "ContactFoundation",
+    srcs = glob(["ContactFoundation/*.swift"]),
+    deps = [
         "@swiftpkg_swift_composable_architecture//:ComposableArchitecture",
     ],
 )

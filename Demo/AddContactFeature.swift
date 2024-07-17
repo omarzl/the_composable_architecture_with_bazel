@@ -6,6 +6,7 @@
 //
 
 import ComposableArchitecture
+import ContactFoundation
 
 @Reducer
 struct AddContactFeature {

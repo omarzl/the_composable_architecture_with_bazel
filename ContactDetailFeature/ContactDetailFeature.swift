@@ -5,29 +5,34 @@
 //  Created by Omar Zúñiga Lagunas on 17/07/24.
 //
 
+import ContactFoundation
 import ComposableArchitecture
 
 @Reducer
-struct ContactDetailFeature {
+public struct ContactDetailFeature {
   @ObservableState
-  struct State: Equatable {
-    let contact: Contact
+  public struct State: Equatable {
+    public let contact: Contact
     @Presents var alert: AlertState<Action.Alert>?
+    
+    public init(contact: Contact) {
+      self.contact = contact
+    }
   }
-  enum Action {
+  public enum Action {
     case alert(PresentationAction<Alert>)
     case delegate(Delegate)
     case deleteButtonTapped
-    enum Alert {
+    public enum Alert {
       case confirmDeletion
     }
-    enum Delegate {
+    public enum Delegate {
       case confirmDeletion
     }
   }
   
   @Dependency(\.dismiss) var dismiss
-  var body: some ReducerOf<Self> {
+  public var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
       case .alert(.presented(.confirmDeletion)):
@@ -46,9 +51,11 @@ struct ContactDetailFeature {
     }
     .ifLet(\.$alert, action: \.alert)
   }
+  
+  public init() {}
 }
 
-extension AlertState where Action == ContactDetailFeature.Action.Alert {
+public extension AlertState where Action == ContactDetailFeature.Action.Alert {
   static let confirmDeletion = Self {
     TextState("Are you sure?")
   } actions: {

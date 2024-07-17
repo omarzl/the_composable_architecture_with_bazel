@@ -7,6 +7,8 @@
 
 import SwiftUI
 import ComposableArchitecture
+import ContactDetailFeature
+import ContactFoundation
 
 struct ContactsView: View {
   @Perception.Bindable var store: StoreOf<ContactsFeature>
