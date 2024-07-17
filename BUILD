@@ -11,10 +11,6 @@ load(
     "xcodeproj",
 )
 load("@gazelle//:def.bzl", "gazelle", "gazelle_binary")
-load(
-  "@rules_swift_package_manager//swiftpkg:defs.bzl",
-  "swift_update_packages",
-)
 
 # App targets
 
@@ -55,14 +51,13 @@ gazelle_binary(
     ],
 )
 
-swift_update_packages(
-    name = "swift_update_pkgs",
-    gazelle = ":gazelle_bin",
-    generate_swift_deps_for_workspace = False,
-    update_bzlmod_stanzas = True,
-)
-
 gazelle(
     name = "update_build_files",
+    data = [
+        "@swift_deps_info//:swift_deps_index",
+    ],
+    extra_args = [
+        "-swift_dependency_index=$(location @swift_deps_info//:swift_deps_index)",
+    ],
     gazelle = ":gazelle_bin",
 )
