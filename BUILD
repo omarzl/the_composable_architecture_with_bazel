@@ -19,7 +19,7 @@ ios_application(
     bundle_id = "com.omarzl.Demo",
     families = ["iphone"],
     infoplists = [":Demo/Info.plist"],
-    minimum_os_version = "17.5",
+    minimum_os_version = "16.0",
     visibility = ["//visibility:public"],
     deps = [":DemoSources"],
 )
