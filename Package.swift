@@ -7,7 +7,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/pointfreeco/swift-composable-architecture.git",
-            branch: "master"
+            branch: "main"
         ),
     ]
 )
