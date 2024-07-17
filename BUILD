@@ -39,10 +39,32 @@ xcodeproj(
 
 swift_library(
     name = "DemoSources",
+    module_name = "Demo",
     srcs = glob(["Demo/*.swift"]),
     deps = [
         "@swiftpkg_swift_composable_architecture//:ComposableArchitecture",
     ],
+)
+
+# Tests
+
+swift_library(
+    name = "DemoTests",
+    testonly = True,
+    srcs = glob(["Tests/*.swift"]),
+    deps = [
+        ":DemoSources",
+    ],
+)
+
+ios_unit_test(
+    name = "UnitTests",
+    minimum_os_version = "16.0",
+    deps = [
+        ":DemoTests",
+    ],
+    platform_type = "ios",
+    visibility = ["//visibility:public"],
 )
 
 # SPM
