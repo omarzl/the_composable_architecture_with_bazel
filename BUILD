@@ -16,6 +16,8 @@ load(
   "swift_update_packages",
 )
 
+# App targets
+
 ios_application(
     name = "App",
     bundle_id = "com.omarzl.Demo",
@@ -26,6 +28,16 @@ ios_application(
     deps = [":DemoSources"],
 )
 
+xcodeproj(
+    name = "xcodeproj",
+    project_name = "App",
+    top_level_targets = [
+        top_level_target(":App", target_environments = ["simulator"]),
+    ],
+)
+
+# Library targets
+
 swift_library(
     name = "DemoSources",
     srcs = glob(["Demo/*.swift"]),
@@ -33,6 +45,8 @@ swift_library(
         "@swiftpkg_swift_composable_architecture//:ComposableArchitecture",
     ],
 )
+
+# SPM
 
 gazelle_binary(
     name = "gazelle_bin",
