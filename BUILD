@@ -1,16 +1,16 @@
-load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
 load(
-  "@build_bazel_rules_apple//apple:ios.bzl",
-  "ios_application",
-  "ios_unit_test",
-  "ios_framework",
+    "@build_bazel_rules_apple//apple:ios.bzl",
+    "ios_application",
+    "ios_framework",
+    "ios_unit_test",
 )
+load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
+load("@gazelle//:def.bzl", "gazelle", "gazelle_binary")
 load(
     "@rules_xcodeproj//xcodeproj:defs.bzl",
     "top_level_target",
     "xcodeproj",
 )
-load("@gazelle//:def.bzl", "gazelle", "gazelle_binary")
 
 # App targets
 
@@ -28,7 +28,10 @@ xcodeproj(
     name = "xcodeproj",
     project_name = "App",
     top_level_targets = [
-        top_level_target(":App", target_environments = ["simulator"]),
+        top_level_target(
+            ":App",
+            target_environments = ["simulator"],
+        ),
     ],
 )
 

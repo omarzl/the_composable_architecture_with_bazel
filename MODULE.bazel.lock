@@ -650,37 +650,19 @@
         "bzlTransitiveDigest": "tmcG5r4Ea0fwksZlVzP5gJsIcOhItBwpGWp1y+K+QBA=",
         "usagesDigest": "HdCPKSm9xWQT+VQ7U7ECINBs2r27h29idA3a1I48/rc=",
         "recordedFileInputs": {
-          "@@//Package.resolved": "41471280899c02a57c0c60404afd762d3b5ad26288a02bdb12f96988e1dc58f9",
-          "@@//Package.swift": "cdec3f3459aa6e82736b3ff69e898f807f64f8222a610c44311da9ecfeb63889"
+          "@@//Package.resolved": "62036fda10a47d9da56b586b464c197e613c86a7470a86fd440285712e1e7058",
+          "@@//Package.swift": "a57796d7085c74c6a902f4030876491bf951f4bec069fc24eb1c5b9e0c717c02"
         },
         "recordedDirentsInputs": {},
         "envVariables": {},
         "generatedRepoSpecs": {
-          "swiftpkg_swift_concurrency_extras": {
+          "swiftpkg_swift_perception": {
             "bzlFile": "@@rules_swift_package_manager~//swiftpkg/internal:swift_package.bzl",
             "ruleClassName": "swift_package",
             "attributes": {
-              "bazel_package_name": "swiftpkg_swift_concurrency_extras",
-              "commit": "479750bd98fac2e813fffcf2af0728b5b0085795",
-              "remote": "https://github.com/pointfreeco/swift-concurrency-extras",
-              "init_submodules": false,
-              "recursive_init_submodules": true,
-              "patch_args": [
-                "-p0"
-              ],
-              "patch_cmds": [],
-              "patch_cmds_win": [],
-              "patch_tool": "",
-              "patches": []
-            }
-          },
-          "swiftpkg_swift_composable_architecture": {
-            "bzlFile": "@@rules_swift_package_manager~//swiftpkg/internal:swift_package.bzl",
-            "ruleClassName": "swift_package",
-            "attributes": {
-              "bazel_package_name": "swiftpkg_swift_composable_architecture",
-              "commit": "c9c1a9a50040408c436e496bac35007add327186",
-              "remote": "https://github.com/pointfreeco/swift-composable-architecture.git",
+              "bazel_package_name": "swiftpkg_swift_perception",
+              "commit": "68901eac31c13c7d1ffef8e1bd8c3870ca2eaa95",
+              "remote": "https://github.com/pointfreeco/swift-perception",
               "init_submodules": false,
               "recursive_init_submodules": true,
               "patch_args": [
@@ -697,8 +679,152 @@
             "ruleClassName": "swift_package",
             "attributes": {
               "bazel_package_name": "swiftpkg_xctest_dynamic_overlay",
-              "commit": "50843cbb8551db836adec2290bb4bc6bac5c1865",
+              "commit": "6f30bdba373bbd7fbfe241dddd732651f2fbd1e2",
               "remote": "https://github.com/pointfreeco/xctest-dynamic-overlay",
+              "init_submodules": false,
+              "recursive_init_submodules": true,
+              "patch_args": [
+                "-p0"
+              ],
+              "patch_cmds": [],
+              "patch_cmds_win": [],
+              "patch_tool": "",
+              "patches": []
+            }
+          },
+          "swiftpkg_swift_clocks": {
+            "bzlFile": "@@rules_swift_package_manager~//swiftpkg/internal:swift_package.bzl",
+            "ruleClassName": "swift_package",
+            "attributes": {
+              "bazel_package_name": "swiftpkg_swift_clocks",
+              "commit": "a8421d68068d8f45fbceb418fbf22c5dad4afd33",
+              "remote": "https://github.com/pointfreeco/swift-clocks",
+              "init_submodules": false,
+              "recursive_init_submodules": true,
+              "patch_args": [
+                "-p0"
+              ],
+              "patch_cmds": [],
+              "patch_cmds_win": [],
+              "patch_tool": "",
+              "patches": []
+            }
+          },
+          "swiftpkg_swift_custom_dump": {
+            "bzlFile": "@@rules_swift_package_manager~//swiftpkg/internal:swift_package.bzl",
+            "ruleClassName": "swift_package",
+            "attributes": {
+              "bazel_package_name": "swiftpkg_swift_custom_dump",
+              "commit": "f01efb26f3a192a0e88dcdb7c3c391ec2fc25d9c",
+              "remote": "https://github.com/pointfreeco/swift-custom-dump",
+              "init_submodules": false,
+              "recursive_init_submodules": true,
+              "patch_args": [
+                "-p0"
+              ],
+              "patch_cmds": [],
+              "patch_cmds_win": [],
+              "patch_tool": "",
+              "patches": []
+            }
+          },
+          "swiftpkg_combine_schedulers": {
+            "bzlFile": "@@rules_swift_package_manager~//swiftpkg/internal:swift_package.bzl",
+            "ruleClassName": "swift_package",
+            "attributes": {
+              "bazel_package_name": "swiftpkg_combine_schedulers",
+              "commit": "9dc9cbe4bc45c65164fa653a563d8d8db61b09bb",
+              "remote": "https://github.com/pointfreeco/combine-schedulers",
+              "init_submodules": false,
+              "recursive_init_submodules": true,
+              "patch_args": [
+                "-p0"
+              ],
+              "patch_cmds": [],
+              "patch_cmds_win": [],
+              "patch_tool": "",
+              "patches": []
+            }
+          },
+          "swiftpkg_swift_concurrency_extras": {
+            "bzlFile": "@@rules_swift_package_manager~//swiftpkg/internal:swift_package.bzl",
+            "ruleClassName": "swift_package",
+            "attributes": {
+              "bazel_package_name": "swiftpkg_swift_concurrency_extras",
+              "commit": "bb5059bde9022d69ac516803f4f227d8ac967f71",
+              "remote": "https://github.com/pointfreeco/swift-concurrency-extras",
+              "init_submodules": false,
+              "recursive_init_submodules": true,
+              "patch_args": [
+                "-p0"
+              ],
+              "patch_cmds": [],
+              "patch_cmds_win": [],
+              "patch_tool": "",
+              "patches": []
+            }
+          },
+          "swiftpkg_swiftui_navigation": {
+            "bzlFile": "@@rules_swift_package_manager~//swiftpkg/internal:swift_package.bzl",
+            "ruleClassName": "swift_package",
+            "attributes": {
+              "bazel_package_name": "swiftpkg_swiftui_navigation",
+              "commit": "b7c9a79f6f6b1fefb87d3e5a83a9c2fe7cdc9720",
+              "remote": "https://github.com/pointfreeco/swiftui-navigation",
+              "init_submodules": false,
+              "recursive_init_submodules": true,
+              "patch_args": [
+                "-p0"
+              ],
+              "patch_cmds": [],
+              "patch_cmds_win": [],
+              "patch_tool": "",
+              "patches": []
+            }
+          },
+          "swiftpkg_swift_composable_architecture": {
+            "bzlFile": "@@rules_swift_package_manager~//swiftpkg/internal:swift_package.bzl",
+            "ruleClassName": "swift_package",
+            "attributes": {
+              "bazel_package_name": "swiftpkg_swift_composable_architecture",
+              "commit": "54eb417336fa849270671b8d2b73180835f9975a",
+              "remote": "https://github.com/pointfreeco/swift-composable-architecture.git",
+              "init_submodules": false,
+              "recursive_init_submodules": true,
+              "patch_args": [
+                "-p0"
+              ],
+              "patch_cmds": [],
+              "patch_cmds_win": [],
+              "patch_tool": "",
+              "patches": []
+            }
+          },
+          "swiftpkg_swift_syntax": {
+            "bzlFile": "@@rules_swift_package_manager~//swiftpkg/internal:swift_package.bzl",
+            "ruleClassName": "swift_package",
+            "attributes": {
+              "bazel_package_name": "swiftpkg_swift_syntax",
+              "commit": "4c6cc0a3b9e8f14b3ae2307c5ccae4de6167ac2c",
+              "remote": "https://github.com/swiftlang/swift-syntax",
+              "init_submodules": false,
+              "recursive_init_submodules": true,
+              "patch_args": [
+                "-p0"
+              ],
+              "patch_cmds": [],
+              "patch_cmds_win": [],
+              "patch_tool": "",
+              "patches": []
+            }
+          },
+          "swiftpkg_swift_identified_collections": {
+            "bzlFile": "@@rules_swift_package_manager~//swiftpkg/internal:swift_package.bzl",
+            "ruleClassName": "swift_package",
+            "attributes": {
+              "bazel_package_name": "swiftpkg_swift_identified_collections",
+              "commit": "2f5ab6e091dd032b63dacbda052405756010dc3b",
+              "remote": "https://github.com/pointfreeco/swift-identified-collections",
               "init_submodules": false,
               "recursive_init_submodules": true,
               "patch_args": [
@@ -719,12 +845,30 @@
               }
             }
           },
+          "swiftpkg_swift_collections": {
+            "bzlFile": "@@rules_swift_package_manager~//swiftpkg/internal:swift_package.bzl",
+            "ruleClassName": "swift_package",
+            "attributes": {
+              "bazel_package_name": "swiftpkg_swift_collections",
+              "commit": "3d2dc41a01f9e49d84f0a3925fb858bed64f702d",
+              "remote": "https://github.com/apple/swift-collections",
+              "init_submodules": false,
+              "recursive_init_submodules": true,
+              "patch_args": [
+                "-p0"
+              ],
+              "patch_cmds": [],
+              "patch_cmds_win": [],
+              "patch_tool": "",
+              "patches": []
+            }
+          },
           "swiftpkg_swift_case_paths": {
             "bzlFile": "@@rules_swift_package_manager~//swiftpkg/internal:swift_package.bzl",
             "ruleClassName": "swift_package",
             "attributes": {
               "bazel_package_name": "swiftpkg_swift_case_paths",
-              "commit": "fc45e7b2cfece9dd80b5a45e6469ffe67fe67984",
+              "commit": "bdd3bf565e84eab0fd612d07749e5b360d5e7d15",
               "remote": "https://github.com/pointfreeco/swift-case-paths",
               "init_submodules": false,
               "recursive_init_submodules": true,
@@ -737,13 +881,13 @@
               "patches": []
             }
           },
-          "swiftpkg_combine_schedulers": {
+          "swiftpkg_swift_dependencies": {
             "bzlFile": "@@rules_swift_package_manager~//swiftpkg/internal:swift_package.bzl",
             "ruleClassName": "swift_package",
             "attributes": {
-              "bazel_package_name": "swiftpkg_combine_schedulers",
-              "commit": "ec62f32d21584214a4b27c8cee2b2ad70ab2c38a",
-              "remote": "https://github.com/pointfreeco/combine-schedulers",
+              "bazel_package_name": "swiftpkg_swift_dependencies",
+              "commit": "d80613633e76d1ef86f41926e72fbef6a2f77d9c",
+              "remote": "https://github.com/pointfreeco/swift-dependencies",
               "init_submodules": false,
               "recursive_init_submodules": true,
               "patch_args": [
