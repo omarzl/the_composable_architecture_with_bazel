@@ -9,6 +9,7 @@ import SwiftUI
 import ComposableArchitecture
 import ContactListFeature
 import AddContactFeature
+import CounterFeature
 
 struct AppView: View {
   let store: StoreOf<AppFeature>

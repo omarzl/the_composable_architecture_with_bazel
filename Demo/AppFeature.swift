@@ -6,6 +6,7 @@
 //
 
 import ComposableArchitecture
+import CounterFeature
 
 @Reducer
 struct AppFeature {

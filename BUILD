@@ -44,6 +44,7 @@ swift_library(
     srcs = glob(["Demo/*.swift"]),
     deps = [
         ":ContactListFeature",
+        "CounterFeature",
     ],
 )
 
@@ -69,6 +70,14 @@ swift_library(
     deps = [
         ":ContactDetailFeature",
         ":AddContactFeature",
+    ],
+)
+
+swift_library(
+    name = "CounterFeature",
+    srcs = glob(["CounterFeature/*.swift"]),
+    deps = [
+        "@swiftpkg_swift_composable_architecture//:ComposableArchitecture",
     ],
 )
 

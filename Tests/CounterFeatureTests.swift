@@ -8,6 +8,7 @@
 import ComposableArchitecture
 @testable import Demo
 import XCTest
+import CounterFeature
 
 @MainActor
 final class CounterFeatureTests: XCTestCase {
