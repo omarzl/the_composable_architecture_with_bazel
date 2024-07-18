@@ -32,6 +32,7 @@ xcodeproj(
             ":App",
             target_environments = ["simulator"],
         ),
+        ":UnitTests",
     ],
 )
 
@@ -42,7 +43,7 @@ swift_library(
     module_name = "Demo",
     srcs = glob(["Demo/*.swift"]),
     deps = [
-        ":ContactDetailFeature"
+        ":ContactListFeature",
     ],
 )
 
@@ -51,6 +52,23 @@ swift_library(
     srcs = glob(["ContactDetailFeature/*.swift"]),
     deps = [
         ":ContactFoundation",
+    ],
+)
+
+swift_library(
+    name = "AddContactFeature",
+    srcs = glob(["AddContactFeature/*.swift"]),
+    deps = [
+        ":ContactFoundation",
+    ],
+)
+
+swift_library(
+    name = "ContactListFeature",
+    srcs = glob(["ContactListFeature/*.swift"]),
+    deps = [
+        ":ContactDetailFeature",
+        ":AddContactFeature",
     ],
 )
 

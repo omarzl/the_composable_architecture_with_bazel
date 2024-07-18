@@ -7,6 +7,7 @@
 
 import ComposableArchitecture
 import SwiftUI
+import ContactListFeature
 
 @main
 struct DemoApp: App {
@@ -15,8 +16,8 @@ struct DemoApp: App {
       ._printChanges()
   }
   
-  static let store2 = Store(initialState: ContactsFeature.State()) {
-    ContactsFeature()
+  static let store2 = Store(initialState: ContactListFeature.State()) {
+    ContactListFeature()
       ._printChanges()
   }
   

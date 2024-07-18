@@ -1,5 +1,5 @@
 //
-//  ContactsFeatureTests.swift
+//  ContactListFeatureTests.swift
 //  DemoTests
 //
 //  Created by Omar Zúñiga Lagunas on 17/07/24.
@@ -8,13 +8,16 @@
 import Foundation
 import ComposableArchitecture
 import XCTest
+import ContactFoundation
+import ContactListFeature
+import AddContactFeature
 @testable import Demo
 
 @MainActor
-final class ContactsFeatureTests: XCTestCase {
+final class ContactListFeatureTests: XCTestCase {
   func testAddFlow() async {
-    let store = TestStore(initialState: ContactsFeature.State()) {
-      ContactsFeature()
+    let store = TestStore(initialState: ContactListFeature.State()) {
+      ContactListFeature()
     } withDependencies: {
       $0.uuid = .incrementing
     }
@@ -44,8 +47,8 @@ final class ContactsFeatureTests: XCTestCase {
   }
   
   func testAddFlow_NonExhaustive() async {
-    let store = TestStore(initialState: ContactsFeature.State()) {
-      ContactsFeature()
+    let store = TestStore(initialState: ContactListFeature.State()) {
+      ContactListFeature()
     } withDependencies: {
       $0.uuid = .incrementing
     }
@@ -65,14 +68,14 @@ final class ContactsFeatureTests: XCTestCase {
   
   func testDeleteContact() async {
     let store = TestStore(
-      initialState: ContactsFeature.State(
+      initialState: ContactListFeature.State(
         contacts: [
           Contact(id: UUID(0), name: "Blob"),
           Contact(id: UUID(1), name: "Blob Jr."),
         ]
       )
     ) {
-      ContactsFeature()
+      ContactListFeature()
     }
     
     await store.send(.deleteButtonTapped(id: UUID(1))) {

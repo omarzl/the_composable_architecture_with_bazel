@@ -7,10 +7,12 @@
 
 import SwiftUI
 import ComposableArchitecture
+import ContactListFeature
+import AddContactFeature
 
 struct AppView: View {
   let store: StoreOf<AppFeature>
-  let store2: StoreOf<ContactsFeature>
+  let store2: StoreOf<ContactListFeature>
   
   var body: some View {
     TabView {

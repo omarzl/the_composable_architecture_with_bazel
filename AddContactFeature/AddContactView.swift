@@ -8,10 +8,10 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct AddContactView: View {
+public struct AddContactView: View {
   @Perception.Bindable var store: StoreOf<AddContactFeature>
   
-  var body: some View {
+  public var body: some View {
     Form {
       TextField("Name", text: $store.contact.name.sending(\.setName))
       Button("Save") {
@@ -25,5 +25,9 @@ struct AddContactView: View {
         }
       }
     }
+  }
+  
+  public init(store: StoreOf<AddContactFeature>) {
+    self.store = store
   }
 }

@@ -1,5 +1,5 @@
 //
-//  ContactsFeature.swift
+//  ContactListFeature.swift
 //  DemoTCA
 //
 //  Created by Omar Zúñiga Lagunas on 16/07/24.
@@ -9,27 +9,33 @@ import Foundation
 import ComposableArchitecture
 import ContactFoundation
 import ContactDetailFeature
+import AddContactFeature
 
 @Reducer
-struct ContactsFeature {
+public struct ContactListFeature {
   @ObservableState
-  struct State: Equatable {
-    var contacts: IdentifiedArrayOf<Contact> = []
-    @Presents var destination: Destination.State?
+  public struct State: Equatable {
+    public var contacts: IdentifiedArrayOf<Contact> = []
+    @Presents
+    public var destination: Destination.State?
     var path = StackState<ContactDetailFeature.State>()
+    
+    public init(contacts: IdentifiedArrayOf<Contact> = []) {
+      self.contacts = contacts
+    }
   }
-  enum Action {
+  public enum Action {
     case addButtonTapped
     case destination(PresentationAction<Destination.Action>)
     case path(StackAction<ContactDetailFeature.State, ContactDetailFeature.Action>)
     case deleteButtonTapped(id: Contact.ID)
-    enum Alert: Equatable {
+    public enum Alert: Equatable {
       case confirmDeletion(id: Contact.ID)
     }
   }
   @Dependency(\.uuid) var uuid
   
-  var body: some ReducerOf<Self> {
+  public var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
       case .addButtonTapped:
@@ -64,19 +70,21 @@ struct ContactsFeature {
       ContactDetailFeature()
     }
   }
+  
+  public init() {}
 }
 
-extension ContactsFeature {
+extension ContactListFeature {
   @CasePathable
   @Reducer(state: .equatable)
-  enum Destination {
+  public enum Destination {
     case addContact(AddContactFeature)
-    case alert(AlertState<ContactsFeature.Action.Alert>)
+    case alert(AlertState<ContactListFeature.Action.Alert>)
   }
 }
 
-extension AlertState where Action == ContactsFeature.Action.Alert {
-  static func deleteConfirmation(id: UUID) -> Self {
+extension AlertState where Action == ContactListFeature.Action.Alert {
+  public static func deleteConfirmation(id: UUID) -> Self {
     Self {
       TextState("Are you sure?")
     } actions: {

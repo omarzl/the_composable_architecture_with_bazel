@@ -8,12 +8,13 @@
 import SwiftUI
 import ComposableArchitecture
 import ContactDetailFeature
+import AddContactFeature
 import ContactFoundation
 
-struct ContactsView: View {
-  @Perception.Bindable var store: StoreOf<ContactsFeature>
+public struct ContactsView: View {
+  @Perception.Bindable var store: StoreOf<ContactListFeature>
   
-  var body: some View {
+  public var body: some View {
     NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
       list
     } destination: { store in
@@ -61,5 +62,9 @@ struct ContactsView: View {
       }
     }
     .buttonStyle(.borderless)
+  }
+  
+  public init(store: StoreOf<ContactListFeature>) {
+    self.store = store
   }
 }

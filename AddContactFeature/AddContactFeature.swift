@@ -9,24 +9,28 @@ import ComposableArchitecture
 import ContactFoundation
 
 @Reducer
-struct AddContactFeature {
+public struct AddContactFeature {
   @ObservableState
-  struct State: Equatable {
-    var contact: Contact
+  public struct State: Equatable {
+    public var contact: Contact
+    
+    public init(contact: Contact) {
+      self.contact = contact
+    }
   }
-  enum Action {
+  public enum Action {
     case cancelButtonTapped
     case delegate(Delegate)
     case saveButtonTapped
     case setName(String)
     @CasePathable
-    enum Delegate: Equatable {
+    public enum Delegate: Equatable {
       case saveContact(Contact)
     }
   }
   @Dependency(\.dismiss) var dismiss
 
-  var body: some ReducerOf<Self> {
+  public var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
       case .cancelButtonTapped:
@@ -47,4 +51,6 @@ struct AddContactFeature {
       }
     }
   }
+  
+  public init() {}
 }
