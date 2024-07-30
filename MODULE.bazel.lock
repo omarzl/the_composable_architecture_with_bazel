@@ -96,8 +96,8 @@
     "https://bcr.bazel.build/modules/rules_swift/2.1.1/source.json": "40fc69dfaac64deddbb75bd99cdac55f4427d9ca0afbe408576a65428427a186",
     "https://bcr.bazel.build/modules/rules_swift_package_manager/0.35.1/MODULE.bazel": "6645384b298903015bc3449ce211ad9fe37bc19eacd288ecd5dc30a6a0fcf4de",
     "https://bcr.bazel.build/modules/rules_swift_package_manager/0.35.1/source.json": "0966bd866dd54dbbb9baa3d067d6e6e231a85cd1520c0abbcfe29e3d2ce6e163",
-    "https://bcr.bazel.build/modules/rules_xcodeproj/2.5.1/MODULE.bazel": "014849e0ee5d03be853c8f4a7f1d7b785c9b7bc6ba0050e3a0d21b14df1991f9",
-    "https://bcr.bazel.build/modules/rules_xcodeproj/2.5.1/source.json": "8b380151290d6f8864216ff1f7eead846c10db60c3bef67f578db11a892741eb",
+    "https://bcr.bazel.build/modules/rules_xcodeproj/2.5.2/MODULE.bazel": "9722f96abc1424c52372fe23b75f63fe5bc2448dfcdd5c6c0f73dc5f08e612f7",
+    "https://bcr.bazel.build/modules/rules_xcodeproj/2.5.2/source.json": "1e5c82cfd3077a518ad281ad745277d00913a416313d60d4179634b264557e26",
     "https://bcr.bazel.build/modules/stardoc/0.5.1/MODULE.bazel": "1a05d92974d0c122f5ccf09291442580317cdd859f07a8655f1db9a60374f9f8",
     "https://bcr.bazel.build/modules/stardoc/0.5.6/MODULE.bazel": "c43dabc564990eeab55e25ed61c07a1aadafe9ece96a4efabb3f8bf9063b71ef",
     "https://bcr.bazel.build/modules/stardoc/0.5.6/source.json": "956954c9c45ef492ea4001ce579dc40431fbd75090151e8f9eadf9ed6377a108",
@@ -1132,7 +1132,7 @@
     "@@rules_xcodeproj~//xcodeproj:extensions.bzl%internal": {
       "general": {
         "bzlTransitiveDigest": "1fbslW10PK5watY0cKS44ulYJ5jYEZhkpBmoqcJnee4=",
-        "usagesDigest": "WOIJOLt42A+uzVqfgBPRtdiF93TWIh2EtU4lVZXCxk8=",
+        "usagesDigest": "qfGibscY0fbJEeXBgiU8BdSb2zK7PKb9vPJdVK2fcH8=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -1155,7 +1155,7 @@
     "@@rules_xcodeproj~//xcodeproj:extensions.bzl%non_module_deps": {
       "general": {
         "bzlTransitiveDigest": "1fbslW10PK5watY0cKS44ulYJ5jYEZhkpBmoqcJnee4=",
-        "usagesDigest": "3hy04IQ5ZzIX/PV17pOiR+IkNI45df1RmDNU1QPGF1Y=",
+        "usagesDigest": "g/L3wDxIXCaaSeguUJCldomhPNUIkgxP9BG7VF2Gblw=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
